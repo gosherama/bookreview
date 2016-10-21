@@ -33,5 +33,15 @@
         <%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure ?" } %>
 
     <% end %>
-
+    
 <% end %>
+
+<script>
+    $('.review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        };
+        path: '/assets/'
+    });    
+</script>
